@@ -1,0 +1,30 @@
+name : complex 
+
+on : push
+
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step One
+        run : date
+  job2:
+    name: Second Job
+    runs-on: windows-lastest
+    steps:
+      - name: Step Two
+        run : date
+  job3:
+    name: Third Job
+    runs-on: macos-latest
+    steps:
+      - name : Step Three
+        run : date
+  job4:
+    name: Fourth Job
+    runs-on: macos-latest
+    needs: [First Job, Second Job, Third Job]
+    steps:
+      - name : Step Four
+        run : date

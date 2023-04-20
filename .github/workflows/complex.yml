@@ -11,7 +11,7 @@ jobs:
         run : date
   job2:
     name: Second Job
-    runs-on: windows-lastest
+    runs-on: windows-latest
     steps:
       - name: Step Two
         run : date
